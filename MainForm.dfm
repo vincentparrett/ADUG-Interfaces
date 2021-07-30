@@ -49,7 +49,7 @@ object MainWindow: TMainWindow
     Top = 142
     Width = 852
     Height = 269
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Align = alClient
     TabOrder = 1
     object TabSheet1: TTabSheet
@@ -88,6 +88,8 @@ object MainWindow: TMainWindow
         inherited Memo1: TMemo
           Width = 838
           Height = 235
+          ExplicitLeft = 3
+          ExplicitTop = 3
           ExplicitWidth = 838
           ExplicitHeight = 235
         end
@@ -117,15 +119,6 @@ object MainWindow: TMainWindow
       Top = 0
       Action = actEditPaste
     end
-  end
-  object Button3: TButton
-    Left = 176
-    Top = 48
-    Width = 75
-    Height = 25
-    Caption = 'Button3'
-    TabOrder = 3
-    OnClick = Button3Click
   end
   object ImageList1: TImageList
     Left = 560

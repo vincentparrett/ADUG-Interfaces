@@ -26,7 +26,6 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     AMemoFrame1: TAMemoFrame;
-    Button3: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -37,7 +36,6 @@ type
     procedure actEditCutExecute(Sender: TObject);
     procedure actEditCopyExecute(Sender: TObject);
     procedure actEditPasteExecute(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
     procedure ActionList1Update(Action: TBasicAction; var Handled: Boolean);
   private
     { Private declarations }
@@ -104,12 +102,6 @@ begin
   if AnotherForm = nil then
     AnotherForm := TAnotherForm.Create(Application, FLogger);
   AnotherForm.Show;
-end;
-
-procedure TMainWindow.Button3Click(Sender: TObject);
-begin
-  ClipboardController.UnsetProvider(LogFrame1);
-  LogFrame1.Free;
 end;
 
 function TMainWindow.CanCopy: Boolean;
